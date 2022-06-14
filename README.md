@@ -17,4 +17,5 @@ https://github.com/ppedvAG/SQL-Admin-MUC-06_2022
 ## Tag 2
 ### Wiederholung
 ### Backup / Restore
- 
+ ### Security Login User Rollen
+ ### Anwendungsrolle Audit

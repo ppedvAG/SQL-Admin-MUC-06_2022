@@ -109,3 +109,56 @@ use [Northwind]
 GO
 GRANT CREATE TABLE TO [EVI]
 GO
+
+
+USE [Northwind]
+GO
+CREATE ROLE [ITRolle] AUTHORIZATION [dbo]
+GO
+USE [Northwind]
+GO
+ALTER ROLE [ITRolle] ADD MEMBER [Fritz]
+GO
+
+
+use [Northwind]
+GO
+REVOKE SELECT ON SCHEMA::[IT] TO [Fritz] AS [dbo]
+GO
+use [Northwind]
+GO
+GRANT SELECT ON SCHEMA::[IT] TO [ITRolle]
+GO
+
+
+USE [master]
+GO
+CREATE LOGIN [Peter] WITH PASSWORD=N'123', DEFAULT_DATABASE=[Northwind], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+GO
+use [msdb];
+GO
+USE [Northwind]
+GO
+CREATE USER [Peter] FOR LOGIN [Peter]
+GO
+USE [Northwind]
+GO
+ALTER USER [Peter] WITH DEFAULT_SCHEMA=[IT]
+GO
+USE [Northwind]
+GO
+ALTER ROLE [ITRolle] ADD MEMBER [Peter]
+
+GO
+
+
+
+--Besitz immer dem DBO geben..!!!
+
+USE [Northwind]
+GO
+CREATE APPLICATION ROLE [Gehaltsrolle] WITH DEFAULT_SCHEMA = [dbo], PASSWORD = N'ppedv2019!'
+GO
+
+
+
