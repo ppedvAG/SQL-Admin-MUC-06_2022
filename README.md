@@ -9,4 +9,12 @@
 ### Agent - Jobs Steps Alerts Operatoren
 ### SystemDBs und Wartungsplan
 ### Database Email
+
+
+https://github.com/ppedvAG/SQL-Admin-MUC-06_2022
+
+
+## Tag 2
+### Wiederholung
+### Backup / Restore
  
